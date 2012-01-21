@@ -62,7 +62,7 @@ module Puffer
               :name => name, :scope => @scope[:module].to_sym, :controller => controller, :singular => singular
 
             defaults :puffer => resource_node do
-              resource_scope_without_puffer resource do
+              resource_scope_without_puffer kind, resource do
                 block.call if block
 
                 member do
